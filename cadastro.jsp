@@ -1,3 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    <%@ page import="model.JavaBeans" %>
+    <%@ page import="java.util.ArrayList" %>
+    <%
+    	ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("produtos");
+    
+    	//teste de recebimento 
+    	for(int i = 0; i < lista.size(); i++){
+    		out.print(lista.get(i).getId());
+    		out.print(lista.get(i).getNome());
+    		out.print(lista.get(i).getQtde());
+    		out.print(lista.get(i).getValor_unit());
+    		out.print(lista.get(i).getData_cad());
+    	}
+    %>
+
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
